@@ -33,4 +33,11 @@ func main() {
 
 	s5 := s3[:]
 	fmt.Println(s5)
+
+	//make和new的比较
+	//new返回的指向这个切片的指针，相当于指针的指针
+	//而make是直接将生成的对象返回，并且可以指定初始化的cap
+	s6 := new([]int)           // 打印出来是	&[]
+	*s6 = append(*s6, 1, 2, 3) // 同样也可以利用指针append
+	fmt.Println(s6)            // 	&[1 2 3]
 }
