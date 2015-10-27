@@ -10,7 +10,16 @@ func main() {
 	var m map[string]string //[]内为key的类型，外面为value的类型
 
 	// map的创建
+	// 1.make
 	m = make(map[string]string)
+	// 2.new
+	mm := new(map[int]string)
+	fmt.Println(mm)
+	//(*mm)[1] = "name" , 编译不通过
+	//(*mm)[2] = "age"
+	//fmt.Println(mm)
+
+	// 3.直接原生
 
 	// map的赋值
 	m["1"] = "一"
@@ -46,4 +55,5 @@ func main() {
 		m3[v] = k
 	}
 	fmt.Println(m3)
+
 }
