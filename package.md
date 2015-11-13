@@ -10,8 +10,9 @@
     --mydriver
       --mydriver.go(pacakge mydriver)
     --sql.go(package sql)
-> Node这里mydriver.go是什么真的无所谓，关键是里面的pacakge，最好要是和他的上一层路径是一样的，也就是和mydriver一样
+> Note:这里mydriver.go是什么真的无所谓，关键是里面的pacakge，最好要是和他的上一层路径是一样的，也就是和mydriver一样
 那么在sql.go中如果要引入mydriver这个package，就需要
+
 `
   import "testPackage/sql/mydriver"
 `
