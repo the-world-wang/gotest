@@ -15,12 +15,14 @@
 `
   import "testPackage/sql/mydriver"
 `
+
 这里就可以看出，其实一切都是相对于(GOROOT和GOPATH来的)，如果你这样想，import的是最后编译出来的.a文件，就会认为与他们之间的相对路径不存在任何的问题了。（我之前一直在纠结这个问题）
 ##最后看一下编译后文件
---testPacakge
-  --sql
-    --mydriver.a
-  --sql.a
+-- testPacakge
+  -- sql
+    -- mydriver.a
+  -- sql.a
+  
 ##结论
 1. import的包只和有关路径名有关
 2. 最后生成的.a文只和上一文件夹名有关系
