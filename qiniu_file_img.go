@@ -23,10 +23,10 @@ func main() {
 	deadline_sec := time.Now().Add(3000 * time.Second).Unix()
 
 	//遍历文件夹...上传文件
-	path := "D:/temp/img"
-	files, _ := ListDir(path, "png")
+	path := "D:/temp/html"
+	files, _ := ListDir(path, "html")
 	for _, v := range files {
-		reg := "timetable/img/"
+		reg := "timetable/html/"
 		// filename := uuid.New()
 		reg = reg + strings.Replace(v, path+"\\", "", -1)
 		fmt.Println(reg)
